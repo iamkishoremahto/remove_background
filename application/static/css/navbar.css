@@ -18,6 +18,12 @@
     font-weight: 300;
     color: #6f6b6b !important;
 }
+.btn-custom:hover{
+    color: white !important;
+}
+.btn:hover{
+    color: white !important;
+}
 #navbarNavAltMarkup{
     justify-content: space-between;
 

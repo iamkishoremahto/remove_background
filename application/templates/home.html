@@ -1,12 +1,12 @@
 {% extends "page_layout.html" %}
 {% import "navbar.html" as macros %}
-{% from "homebody.html" import home_body %}
+{% from "home_content.html" import home_content %}
 
 {% block title %} Home Page {% endblock %}
 {% block navbar %} {{ macros.navbar_mac() }} {% endblock %}
 
 {% block body %}
-{{ home_body() }} 
+{{ home_content() }}
 {% endblock %}
 
 
