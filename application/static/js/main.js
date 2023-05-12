@@ -6,7 +6,9 @@ upload_btn.addEventListener("click",function(){
 
 file_upload.addEventListener("change", function(){
     fileInput = document.getElementById('file_upload')
+    document.getElementById('upload_btn_wrapper').innerHTML = `<div class="custom-loader"></div>`
     file = fileInput.files[0]
+    
     upload(file)
     // console.log(file.name)
 })

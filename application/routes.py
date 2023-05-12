@@ -17,7 +17,7 @@ def home():
 @app.route('/upload',methods = ['POST'])
 def upload():
     try:
-        os.remove('application/static/temp_uploaded_image/output.png')
+        os.remove('application/static/temp_uploaded_image/output.webp')
     except:
         pass
     file = request.files['file']
@@ -25,11 +25,11 @@ def upload():
     file.save(file_path)
     input_file = Image.open(file_path)
     output = remove(input_file)
-    output.save(f'application/static/temp_uploaded_image/output.png')
+    output.save(f'application/static/temp_uploaded_image/output.webp')
     os.remove((file_path))
-    image_url = url_for('static', filename = 'temp_uploaded_image/output.png')
+    image_url = url_for('static', filename = 'temp_uploaded_image/output.webp')
     with app.test_request_context():
-        url = url_for('static', filename='temp_uploaded_image/output.png')
+        url = url_for('static', filename='temp_uploaded_image/output.webp')
         # return  ("{{ url_for('static',filename='temp_uploaded_image/output.png') }}")
     # return "application/static/temp_uploaded_image/output.png"
     return url

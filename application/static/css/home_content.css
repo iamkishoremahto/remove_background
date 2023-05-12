@@ -32,6 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.5s;
 }
 
 .big_btn{
@@ -49,8 +50,10 @@
 }
 
 #show_area{
+    transition: 2s;
     display: flex;
     flex-direction: column;
+    
     gap:20px;
     justify-content: center;
     align-items: center;
@@ -66,8 +69,36 @@
 }
 
 #show_area img{
+    background-color: #e5e5f7;
+opacity: 0.8;
+background-image:  repeating-linear-gradient(45deg, #1e0707 25%, transparent 25%, transparent 75%, #06071f 75%, #03041a), repeating-linear-gradient(45deg, #444cf7 25%, #e5e5f7 25%, #e5e5f7 75%, #1b1d3b 75%, #38394f);
+background-position: 0 0, 10px 10px;
+background-size: 20px 20px;
     border-radius: 35px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     height: 80%;
     width: auto;
 }
+
+
+.custom-loader {
+    --d:22px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    color: #766DF4;
+    box-shadow: 
+      calc(1*var(--d))      calc(0*var(--d))     0 0,
+      calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+      calc(0*var(--d))      calc(1*var(--d))     0 2px,
+      calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+      calc(-1*var(--d))     calc(0*var(--d))     0 4px,
+      calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+      calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+    animation: s7 1s infinite steps(8);
+  }
+  
+  @keyframes s7 {
+    100% {transform: rotate(1turn)}
+  }
+
